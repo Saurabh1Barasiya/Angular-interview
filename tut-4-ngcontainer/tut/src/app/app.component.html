@@ -1,0 +1,16 @@
+<!-- app  (control + u) press karke dekhna. apka  -->
+<!-- ng container dom par nahi milega. -->
+<!-- ye only structure ko (group) maintain karta hai. -->
+
+<!-- <ng-container *ngIf="val" *ngFor="let num of myArray">
+  <h1>hello kese ho. {{num}}</h1>
+
+</ng-container> -->
+
+<!-- isi structure ko follow karna padega. -->
+
+<ng-container *ngIf="val">
+  <ng-container *ngFor="let num of myArray">
+    <h1>hello kese ho. {{num}}</h1>
+  </ng-container>
+</ng-container>
