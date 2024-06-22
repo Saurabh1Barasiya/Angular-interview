@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tut';
   val:Boolean=false;
-  
+  numbers:number[] = [10,20,30,40,50]
 }
