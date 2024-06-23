@@ -1,0 +1,14 @@
+.comming-data{
+    background-color: blueviolet;
+    height: 200px;
+    display: flex;
+    padding: 1rem;
+
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    /* font-size: 1.5vw; */
+    background-color: aqua;
+}
