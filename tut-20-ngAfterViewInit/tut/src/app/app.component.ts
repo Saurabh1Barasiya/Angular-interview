@@ -17,6 +17,7 @@ export class AppComponent implements OnInit,AfterViewInit{
 
   ngAfterViewInit(): void {
     console.log(this.button.nativeElement);
+    this.button.nativeElement.innerText = "Changed."
   }
 
 }
