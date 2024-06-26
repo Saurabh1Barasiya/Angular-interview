@@ -1,0 +1,16 @@
+<div class="container">
+  <label>
+    <input type="radio" name="options" [(ngModel)]="selectedOption"  value="A"> A
+  </label>
+  <label>
+    <input type="radio" name="options" [(ngModel)]="selectedOption"  value="B"> B
+  </label>
+</div>
+
+<div class="" *ngIf="selectedOption=='A'">
+  <h1>I am div A</h1>
+</div>
+
+<div class="" *ngIf="selectedOption=='B'">
+  <h1>I am div B</h1>
+</div>
