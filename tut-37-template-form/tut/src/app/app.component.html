@@ -1,0 +1,15 @@
+<form #myForm="ngForm" (ngSubmit)="getData(myForm.value)">
+  <label for="fname">Firstname</label>
+  <input type="text" name="fname" id="fname" ngModel placeholder="Firstname">
+  <br><br>
+
+  <label for="lname">Lastname</label>
+  <input type="text" name="lname" id="lname" ngModel placeholder="Lastname">
+  <br><br>
+
+  <label for="mobile">Mobile</label>
+  <input type="text" name="mobile" id="mobile" ngModel placeholder="mobile">
+  <br><br>
+
+  <button type="submit">Submit</button>
+</form>
