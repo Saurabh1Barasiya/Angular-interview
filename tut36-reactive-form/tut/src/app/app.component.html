@@ -1,0 +1,17 @@
+<form [formGroup]="profileForm" (ngSubmit)="getData()">
+  <label for="firstname">Firstname</label>
+  <input type="text" name="firstname" id="firstname" formControlName="firstname">
+  <br><br>
+
+  <label for="lastname">Lastname</label>
+  <input type="text" name="lastname" id="lastname" formControlName="lastname">
+  <br><br>
+
+
+  <label for="mobile">Lastname</label>
+  <input type="text" name="mobile" id="mobile" formControlName="mobile">
+  <br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
