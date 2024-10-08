@@ -1,0 +1,85 @@
+<h1>Learn about reactive form.</h1>
+
+<form [formGroup]="profileForm" (ngSubmit)="getData()">
+  <label for="firstname">firstname</label>
+  <input type="text" name="firstname" id="firstname" formControlName="firstname">
+  <div *ngIf="profileForm.get('firstname')?.invalid && (profileForm.get('firstname')?.touched || profileForm.get('firstname')?.dirty)"
+  [ngStyle]="{'color':'red'}"
+  >
+
+    <p>Touch ki value true ho  </p>
+    <p>firstname abhi invalid=true h because required field ko fullfill nahi kiya.</p>
+  </div>
+  
+  <br><br>
+
+  <label for="lastname">lastname</label>
+  <input type="text" name="lastname" id="lastname" formControlName="lastname">
+
+  <div *ngIf="profileForm.get('lastname')?.invalid && (profileForm.get('lastname')?.touched || profileForm.get('lastname')?.dirty)" [ngStyle]="{'color':'red'}">
+       <div *ngIf="profileForm.get('lastname')?.hasError('required')">
+          <p>this field is required</p>
+       </div>
+  </div>
+
+  <br><br>
+
+  <label for="email">email</label>
+  <input type="email" name="email" id="email" formControlName="email">
+  <div *ngIf="profileForm.get('email')?.invalid && (profileForm.get('email')?.touched || profileForm.get('email')?.dirty)" [ngStyle]="{'color':'red'}">
+    <div *ngIf="profileForm.get('email')?.hasError('required')">
+      <p>this field is required</p>
+    </div>
+
+    <div *ngIf="profileForm.get('email')?.hasError('email')">
+      <p>please fill valid emial</p>
+    </div>
+
+  </div>
+
+  <br><br>
+
+  <label for="gender">gender</label>
+
+  <!-- yaha par name attribure ki value set karne ki need nahi h. -->
+
+  <input type="radio" value="male" id="gender" formControlName="gender"> Male
+  <input type="radio" value="female" id="gender" formControlName="gender"> Female
+  <input type="radio" value="others" id="gender" formControlName="gender"> Prefer not say
+
+  
+  <br><br>
+
+  <div formGroupName="address">
+    <select name="state" id="state" formControlName="state">
+      <option value="" disabled>Select state</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Utter Pradesh">Utter Pradesh</option>
+      <option value="Delhi">Delhi</option>
+    </select>
+
+    <div *ngIf="profileForm.get('address')?.get('state')?.invalid  && (profileForm.get('address')?.get('state')?.touched)">
+        <div *ngIf="profileForm.get('address')?.get('state')?.hasError('required')" [ngStyle]="{'color':'red'}">
+          <p>this field is required.</p>
+        </div>
+    </div>
+
+    <br><br>
+    <select name="city" id="city" formControlName="city">
+      <option value="" disabled>Select City</option>
+      <option value="Jabalpur">Jabalpur</option>
+      <option value="Chhindwara">Chhindwara</option>
+      <option value="Narsingpur">Narsingpur</option>
+    </select>
+
+    <div *ngIf="profileForm.get('address')?.get('city')?.invalid  && (profileForm.get('address')?.get('city')?.touched || profileForm.get('address')?.get('city')?.dirty)" [ngStyle]="{'color':'red'}">
+      <div *ngIf="profileForm.get('address')?.get('city')?.hasError('required')">
+        <p>This is required field</p>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <button type="submit">Submit</button>
+</form>
