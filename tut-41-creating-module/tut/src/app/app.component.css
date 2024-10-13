@@ -1,0 +1,39 @@
+/* Basic styling for the nav */
+nav {
+    background-color: #978080;  /* Dark background for the nav bar */
+    padding: 1rem;
+    text-align: center;  /* Center align the navigation */
+  }
+  
+  /* Styling the unordered list inside the nav */
+  .nav-menu {
+    list-style: none;  /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Use flexbox to align items */
+    justify-content: center;  /* Center items horizontally */
+    gap: 20px;  /* Add space between links */
+  }
+  
+  /* Styling the links */
+  .nav-menu li a {
+    color: white;  /* White text for contrast */
+    text-decoration: none;  /* Remove underline */
+    padding: 10px 20px;  /* Add some padding */
+    background-color: #555;  /* Slightly lighter background for links */
+    border-radius: 5px;  /* Round the corners */
+    font-size: 2rem;  /* Font size for better readability */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect */
+  .nav-menu li a:hover {
+    background-color: #ff6f61;  /* Change background color on hover */
+    color: #fff;  /* Keep text white */
+  }
+  
+  /* Make the links more clickable */
+  .nav-menu li {
+    display: inline-block;  /* Make each list item inline for horizontal layout */
+  }
+  
