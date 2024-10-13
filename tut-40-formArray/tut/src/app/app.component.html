@@ -1,0 +1,17 @@
+<form [formGroup]="profileForm" (ngSubmit)="getData()">
+  <label for="">FirstName</label>
+  <input type="text" id="firstname" name="firstname" formControlName="firstname">
+  <br><br>
+  <label for="">LastName</label>
+  <input type="text" id="lastname" name="lastname" formControlName="lastname">
+  <br><br>
+  <h1>Add Skills</h1>
+  
+  <div formArrayName="skills">
+    <div class="" *ngFor="let control of skills.controls; let i = index">
+      <input type="text" [formControlName]="i"/>
+    </div>
+  </div>
+
+  <button>submit</button>
+</form>
