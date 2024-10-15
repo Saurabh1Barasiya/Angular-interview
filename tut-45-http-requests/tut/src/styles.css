@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two columns */
+    gap: 20px; /* Space between sections */
+    padding: 20px; /* Padding inside container */
+  }
+  
+  .container app-getdata, 
+  .container app-postdata, 
+  .container app-putdata, 
+  .container app-deletedata {
+    border: 2px solid #ccc; /* Light border for each section */
+    padding: 15px; /* Padding inside each section */
+    background-color: #f9f9f9; /* Background color for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text alignment */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr; /* Stacks sections in one column on small screens */
+    }
+  }
+  
+
+  button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 12px 20px; /* Padding around text */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Elevate shadow on hover */
+  }
+  
+  button:active {
+    background-color: #388e3c; /* Even darker green on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow on click */
+    transform: translateY(2px); /* Slightly move button down on click */
+  }
+  
