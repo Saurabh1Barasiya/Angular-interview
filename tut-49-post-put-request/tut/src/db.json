@@ -1,0 +1,39 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Angular",
+      "duration": "4 weeks"
+    },
+    {
+      "id": "2",
+      "name": "React",
+      "duration": "5 weeks"
+    },
+    {
+      "id": "da41",
+      "name": "Python",
+      "duration": "4 week"
+    },
+    {
+      "id": "c919",
+      "name": "Java",
+      "duration": "8 week"
+    },
+    {
+      "id": "a676",
+      "name": "root",
+      "duration": ""
+    },
+    {
+      "name": "C++",
+      "duration": "6 weeks",
+      "id": "f06d"
+    },
+    {
+      "id": "6863",
+      "name": "c",
+      "duration": "8 week"
+    }
+  ]
+}

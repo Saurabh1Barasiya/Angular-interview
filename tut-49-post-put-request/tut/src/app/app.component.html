@@ -1,0 +1,23 @@
+<div class="">
+  <form  [formGroup]="course" (ngSubmit)="submit()">
+    <label for="name">name</label>
+    <input type="text" id="name" formControlName="name">
+    <br><br>
+
+    <label for="duration">duration</label>
+    <input type="text" id="duration" formControlName="duration">
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<button (click)="updateData()">Update</button>
+
+<div class="course-container" *ngIf="courseData && courseData.length > 0">
+  <ul class="course-list" *ngFor="let data of courseData">
+    <li class="course-item course-id">ID: {{data.id}}</li>
+    <li class="course-item course-name">Name: {{data.name}}</li>
+    <li class="course-item course-duration">Duration: {{data.duration}}</li>
+  </ul>
+</div>

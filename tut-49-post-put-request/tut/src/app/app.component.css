@@ -1,0 +1,57 @@
+/* Styling the container */
+.course-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling each course list */
+.course-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling each item inside the list */
+.course-item {
+    padding: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Style the course ID */
+.course-id {
+    font-weight: bold;
+    color: #007bff;
+    /* Blue color for emphasis */
+}
+
+/* Style the course name */
+.course-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    /* Darker text for the course name */
+}
+
+/* Style the course duration */
+.course-duration {
+    color: #6c757d;
+    /* Muted color for duration */
+    font-style: italic;
+}
+
+/* Add a hover effect on each list item */
+.course-item:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.3s;
+}
+
+/* Styling the last course to remove border */
+.course-list:last-child {
+    border-bottom: none;
+}
