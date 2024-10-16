@@ -1,0 +1,9 @@
+<div class="course-container" *ngIf="courseData && courseData.length > 0">
+  <ul *ngFor="let data of courseData">
+    <li>ID: {{data.id}}</li>
+    <li>Name: {{data.name}}</li>
+    <li>Duration: {{data.duration}}</li>
+  </ul>
+</div>
+
+<button (click)="deleteCourse()">Delete</button>
