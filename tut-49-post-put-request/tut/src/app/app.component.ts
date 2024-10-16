@@ -65,4 +65,21 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+
+  patcheData() {
+    let id = 'f06d';
+    let data = {
+      duration: "10 weeks"
+    }
+
+    this.sr.patchPost(id, data).subscribe({
+      next: (response) => {
+        console.log(response);
+      },
+      error: (err) => {
+        console.log("error aa gayi h", err);
+      }
+    });
+  }
 }

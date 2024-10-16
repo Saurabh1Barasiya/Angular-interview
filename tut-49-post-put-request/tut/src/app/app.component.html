@@ -13,6 +13,7 @@
 </div>
 
 <button (click)="updateData()">Update</button>
+<button (click)="patcheData()">Update</button>
 
 <div class="course-container" *ngIf="courseData && courseData.length > 0">
   <ul class="course-list" *ngFor="let data of courseData">

@@ -1,5 +1,5 @@
 export interface Courses{
     id?: number,
-    name: string,
-    duration: string
+    name?: string,
+    duration?: string
 }

@@ -24,4 +24,8 @@ export class MyservicesService {
     return this.http.put<Courses>(newApiUrl,data);
   }
 
+  patchPost(id:any,data:Courses):Observable<Courses>{
+    let newApiUrl = `${this.apiUrl}/${id}`;
+    return this.http.put<Courses>(newApiUrl,data);
+  }
 }
