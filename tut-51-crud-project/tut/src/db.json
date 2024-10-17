@@ -1,0 +1,19 @@
+{
+  "courses": [
+    {
+      "name": "Angular",
+      "duration": "70 hours",
+      "id": "1"
+    },
+    {
+      "name": "React",
+      "duration": "90 hours",
+      "id": "2"
+    },
+    {
+      "name": "Django",
+      "duration": "80 hours",
+      "id": "3"
+    }
+  ]
+}

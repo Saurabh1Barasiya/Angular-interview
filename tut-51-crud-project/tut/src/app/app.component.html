@@ -1,0 +1,56 @@
+<h1>CRUD Application</h1>
+
+<h2>Add New Course</h2>
+<form [formGroup]="courseForm" (ngSubmit)="addCourse()">
+  <label for="name">Course Name:</label>
+  <input id="name" formControlName="name" type="text">
+  <br><br>
+
+  <label for="duration">Course Duration:</label>
+  <input id="duration" formControlName="duration" type="text">
+  <br><br>
+
+  <button type="submit" [disabled]="!courseForm.valid">Add Course</button>
+</form>
+
+<!-- Modal Popup for Editing Course -->
+<div class="modal" [ngClass]="{'show-modal': showModal}">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>Edit Course</h2>
+
+    <form [formGroup]="courseForm" (ngSubmit)="updateCourse()">
+      <label for="name">Course Name:</label>
+      <input id="name" formControlName="name" type="text">
+
+      <label for="duration">Course Duration:</label>
+      <input id="duration" formControlName="duration" type="text">
+
+      <button type="submit">Update Course</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Table to Display Courses -->
+<table border="1" style="width: 100%; text-align: left;">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Course Name</th>
+      <th>Duration</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.id }}</td>
+      <td>{{ course.name }}</td>
+      <td>{{ course.duration }}</td>
+      <td>
+        <button (click)="openEditModal(course)">Edit</button>
+        <button (click)="deleteCourse(course.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
