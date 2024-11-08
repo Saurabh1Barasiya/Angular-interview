@@ -1,0 +1,20 @@
+<h1>Login Form</h1>
+<div class="">
+    <form [formGroup]="loginform" (ngSubmit)="submit()">
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" formControlName="username">
+        <br><br>
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" formControlName="password">
+        <br><br>
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <div class="" *ngIf="loginError" [ngStyle]="{'color':'red'}">
+        <p>wrong username and password</p>
+    </div>
+</div>
+
+<p>want to sign up</p> <a routerLink="/signup">Sign Up</a>
