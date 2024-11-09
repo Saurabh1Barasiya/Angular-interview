@@ -1,0 +1,13 @@
+<div class="inside">
+  <label for="box">Box A</label> <input type="radio" name="box" id="box" value="A" [(ngModel)]="selectOption">
+  <label for="box">Box B</label> <input type="radio" name="box" id="box" value="B" [(ngModel)]="selectOption">
+
+  <div class="" *ngIf="selectOption == 'A'">
+    Box-A
+  </div>
+
+  <div class="" *ngIf="selectOption == 'B'">
+    Box-B
+</div>
+</div>
+
