@@ -1,0 +1,32 @@
+/* your-component.component.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+
+  
+  .heigh-marks{
+    background-color: aquamarine;
+  }
+
+  .nice-marks{
+    background-color: cadetblue;
+  }
+
+  .good-marks{
+    background-color: blue;
+  }
+
+  .ok{
+    background-color: red;
+  }
