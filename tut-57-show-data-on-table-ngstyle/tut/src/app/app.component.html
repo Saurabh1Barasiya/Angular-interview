@@ -1,0 +1,21 @@
+<!-- your-component.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Grade</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students" [ngStyle]="getMarks(student.marks)">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.grade }}</td>
+      <td>{{ student.marks }}</td>
+    </tr>
+  </tbody>
+</table>
