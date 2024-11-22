@@ -1,0 +1,10 @@
+<label for="box-1">box-1</label>
+<input type="checkbox" name="box-1" id="box-1" [(ngModel)]="b1">
+
+<br>
+
+<label for="box-2">box-2</label>
+<input type="checkbox" name="box-2" id="box-2" [(ngModel)]="b2">
+
+<div *ngIf="b1" [ngStyle]="{'backgroundColor':'red'}">I am box-1</div>
+<div *ngIf="b2" [ngStyle]="{'backgroundColor':'blue'}">I am box-2</div>
