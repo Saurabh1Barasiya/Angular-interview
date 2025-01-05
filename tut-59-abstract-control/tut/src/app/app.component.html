@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="gettingData()">
+  <div class="">
+    <label for="password">password</label>
+    <input type="password" formControlName="password" id="password">
+    <div class="" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+      <div *ngIf="form.get('password')?.hasError('required')">
+        <p>this field is required</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="">
+    <label for="confirmPassword">confirmPassword</label>
+    <input type="password" formControlName="confirmPassword" id="confirmPassword">
+    <div  *ngIf="form.errors?.['passwordMismatch'] && form.controls?.['confirmPassword']?.touched">
+      password mismatch
+    </div>
+  </div>
+
+  <button>Submit</button>
+</form>
