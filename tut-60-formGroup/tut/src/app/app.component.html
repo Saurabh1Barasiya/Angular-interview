@@ -1,0 +1,18 @@
+<h1>Form Control</h1>
+
+<form [formGroup]="myForm" (ngSubmit)="getData()">
+  <label for="fname">fname</label>
+  <input type="text" formControlName="fname" name="fname">
+   
+  <br><br>
+  <label for="lname">lname</label>
+  <input type="text" formControlName="lname" name="lname">
+  <br><br>
+  <label for="email">email</label>
+  <input type="email" formControlName="email" name="email">
+  <br><br>
+  <label for="fname">fname</label>
+  <input type="password" formControlName="password" name="password">
+  <br><br>
+  <button type="submit">Submit</button>
+</form>
