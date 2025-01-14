@@ -1,0 +1,19 @@
+<form [formGroup]="myForm" (ngSubmit)="getData()">
+  <label for="name">Name</label>
+  <input type="text" formControlName="name"> 
+  <br><br><br>
+  <label for="email">Email</label>
+  <input type="email" formControlName="email"> 
+  <br><br><br>
+  <div formArrayName="skills">
+    <div *ngFor="let skill of Skills.controls;let i=index">
+      <span>{{i+1}}</span>
+      <input type="text" [formControlName]="i">
+
+      <button (click)="addSkill()">Add Skills</button>
+      <button (click)="removeSkill(i)">Remove</button>
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
